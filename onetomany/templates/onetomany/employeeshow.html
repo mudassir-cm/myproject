@@ -1,0 +1,35 @@
+<h2>Employee List Page</h2>
+
+{% if list %}
+<table>
+    <tr>
+        <th>Name</th>
+    </tr>
+    {% for emp in list%}
+    <tr>
+        <td>{{ emp.name }}</td>
+        <td>
+            <a href="/onetomany/employee/update/{{ emp.id }}">Edit</a>
+        </td>
+        <td>
+            <a href="/onetomany/employee/delete/{{ emp.id }}">Delete</a>
+        </td>
+        <td>
+            <a href="/onetomany/employee/view/{{ emp.id }}">View</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+<h2>There is no employee yet</h2>
+{% endif %}
+
+<p>
+    <a href="/onetomany/employee/add">Add More Employee</a>
+</p>
+<p>
+    <a href="/onetomany/home">Back</a>
+</p>
+<p>
+    <a href="/">Home</a>
+</p>

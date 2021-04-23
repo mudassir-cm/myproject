@@ -1,0 +1,33 @@
+{% if list %}
+<table>
+    <tr>
+        <th>Name</th>
+    </tr>
+    {% for dep in list %}
+    <tr>
+        <td>{{ dep.name }}</td>
+        <td>
+            <a href="/onetomany/depertment/update/{{ dep.id }}">Edit</a>
+        </td>
+        <td>
+            <a href="/onetomany/department/delete/{{ dep.id }}">Delete</a>
+        </td>
+        <td>
+            <a href="/onetomany/department/view/{{ dep.id }}">View</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+<h2>There is on Departpent yet</h2>
+{% endif %}
+
+<p>
+    <a href="/onetomany/home">Back</a>
+</p>
+<p>
+    <a href="/onetomany/department/add">Add New Department</a>
+</p>
+<p>
+    <a href="/">Home</a>
+</p>

@@ -1,0 +1,20 @@
+<h1>{{ departmentpage }}</h1>
+<div>Name:    {{ dep.name }}</div>
+<div>Contact: {{ dep.contact }}</div>
+{% if dep.employee_set.all %}
+<h4>Department's Employee List</h4>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Contact</th>
+    </tr>
+{% for emp in dep.employee_set.all %}
+    <tr>
+        <td>{{ emp.name }}</td>
+        <td>{{ emp.contact }}</td>
+    </tr>
+{% endfor %}
+</table>
+{% else %}
+<h4>Department has no employee yet</h4>
+{% endif %}

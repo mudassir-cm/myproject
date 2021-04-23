@@ -1,0 +1,28 @@
+{% if list %}
+<table>
+    <tr>
+        <th>Name
+        </th>
+    </tr>
+    {% for person in list%}
+    <tr>
+        <td>{{ person.name }}</td>
+        <td>
+            <a href="/singleentity/person/update/{{ person.id }}">Edit</a>
+        </td>
+        <td>
+            <a href="/singleentity/person/delete/{{ person.id }}">Delete</a>
+        </td>
+        <td>
+            <a href="/singleentity/person/view/{{ person.id }}">View</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+<h2>There is no record yet</h2>
+<p>
+    <a href="/singleentity/person/add">Add New Person's Records</a>
+</p>
+{% endif %}
+<a href="/singleentity/home">Single Entity Home Page</a>

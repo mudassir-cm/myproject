@@ -1,0 +1,33 @@
+<form method="post" action="/onetomany/employee/update/{{ emp.id }}">
+    {% csrf_token %}
+    <div>
+        <label>Name</label>
+        <div>
+        <input type="text" value="{{ emp.name }}">
+        </div>
+    </div>
+    <div>
+        <label>Contact</label>
+        <div>
+        <input type="text" value="{{ emp.contact }}"></input>
+        </div>
+    </div>
+    <div>
+        <label>City</label>
+        <div>
+        <input type="text" value="{{ emp.city }}"></input>
+        </div>
+    </div>
+    <div>
+        <label>Department</label>
+        <div>
+            <select >
+                {% for d in emp.departments.all %}
+                <option value="{{ d.id }}">{{ d.name }}</option>
+                {% endfor%}
+            </select>
+        </div>
+    </div>
+    <input type="submit" value="Update">
+
+</form>

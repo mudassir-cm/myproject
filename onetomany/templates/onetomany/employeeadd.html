@@ -1,0 +1,22 @@
+<form method="post" action="/onetomany/employee/add">
+    {% csrf_token %}
+    <div>
+        <label>Name</label>
+        <div>{{ form.name }}</div>
+    </div>
+    <div>
+        <label>Contact</label>
+        <div>{{ form.contact }}</div>
+    </div>
+    <div>
+        <label>City</label>
+        <div>{{ form.city }}</div>
+    </div>
+    <div>
+        <label>Department</label>
+        <div>{{ form.departments }}</div>
+    </div>
+    <div>
+        <input type="submit" value="Update">
+    </div>
+</form>

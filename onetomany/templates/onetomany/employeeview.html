@@ -1,0 +1,19 @@
+{% if emp %}
+<div>
+    Name:     {{ emp.name }}
+</div>
+<div>
+    Contact:     {{ emp.contact }}
+</div>
+<div>
+    City:     {{ emp.city }}
+</div>
+<div>
+    Department:     {{ emp.departments.name }}
+</div>
+{% else %}
+<div>{{ emp }}</div>
+{% endif %}
+<p>
+    <a href="/onetomany/employee/show">Back</a>
+</p>

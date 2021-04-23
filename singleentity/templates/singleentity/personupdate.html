@@ -1,0 +1,25 @@
+{% if person %}
+<form method="post" action="/singleentity/person/update/{{ person.id }}">
+    {% csrf_token %}
+    <div>
+        <label>Name</label>
+        <input type="text" name="name" value="{{ person.name }}">
+    </div>
+    <div>
+        <label>Contact</label>
+        <input type="text" name="contact" value="{{ person.contact }}">
+    </div>
+    <div>
+        <label>City</label>
+        <input type="text" name="city" value="{{ person.city }}">
+    </div>
+    <div>
+        <input type="submit" value="Update">
+    </div>
+</form>
+{% else %}
+<h2>No record Found</h2>
+{% endif %}
+<div>
+    <a href="/singleentity/home"><h3>Single Entity Home Page</h3></a>
+</div>

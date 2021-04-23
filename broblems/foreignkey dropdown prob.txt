@@ -1,0 +1,18 @@
+department is parent model
+employee is child model
+i want to update employee
+emp = Employee.objects.get(id=id)  emp oject give me only single dempartment name and id which is belong to this  employee but at view side i required
+complete department name and id list to show in dropdown for selecting to update employee department
+
+template side
+<select>
+{% for d in emp.departments.all %}
+<option value="{{ d.id }}">{{ d.name }}</option>
+{% endfor %}
+</select>
+
+to solve this do the following links
+
+1)  https://stackoverflow.com/questions/59759222/how-can-i-display-a-foreign-key-on-a-select-tag-in-my-django-template
+
+2)  https://stackoverflow.com/questions/46314246/how-to-update-a-foreign-key-field-in-django-models-py

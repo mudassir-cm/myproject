@@ -1,0 +1,20 @@
+<h2>Department Add Page</h2>
+
+<form method="post" action="/onetomany/department/add">
+    {% csrf_token %}
+    <div>
+        <label>Name</label>
+        <div>{{ form.name }}</div>
+    </div>
+    <div>
+        <label>Contact</label>
+        <div>{{ form.contact }}</div>
+    </div>
+    <div>
+        <input type="submit" value="Add">
+    </div>
+</form>
+
+<p>
+    <a href="/onetomany/home">Back</a>
+</p>
