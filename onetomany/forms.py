@@ -7,9 +7,6 @@ class DepartmentForm(forms.ModelForm):
         fields = '__all__'
 
 class EmployeeForm(forms.ModelForm):
-    def __init__(self, *args, **kwargs):
-        self.fields['departments'].queryset = Department.objects.all()
-
     class Meta:
         model = Employee
         fields = '__all__'

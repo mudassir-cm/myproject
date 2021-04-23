@@ -1,0 +1,12 @@
+solution
+     
+     same probleb in case of following
+
+1) creating modelform of two models model name is svaping to each other or wrong model set in meta class of ModelForm class
+
+2) forget to give the "name attribute in input tag" error <input value="{{ obj.name }}">sol <input name="name" value="{{ obj.name }}"> 
+
+3) when you use ModelForm class to update data of model you must specify 
+   all fields of model in form when you set "fields = '__all__" in meta class  
+
+      other than this ValueError is come (The Employee could not be changed because the data didn't validate.)

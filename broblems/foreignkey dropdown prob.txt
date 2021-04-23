@@ -16,3 +16,62 @@ to solve this do the following links
 1)  https://stackoverflow.com/questions/59759222/how-can-i-display-a-foreign-key-on-a-select-tag-in-my-django-template
 
 2)  https://stackoverflow.com/questions/46314246/how-to-update-a-foreign-key-field-in-django-models-py
+
+to solve this probleb further searching
+
+query to google (updating child record get all parents to show in dropdown django)
+
+              
+                       after long strugle the probleb is solved by the help of my Allah
+
+                                    solution is here
+
+
+
+view
+
+     def employeeupdate(request, id):
+    if request.method == 'POST':
+        emp = Employee.objects.get(id=id)
+        employee = EmployeeForm(request.POST, instance=emp)
+        employee.save()
+        return redirect('/onetomany/employee/show')
+    else:
+        emp = Employee.objects.get(id=id)
+        dep = Department.objects.all()                     ////  increment this line and pass this object in next line as dic
+        return render(request, 'onetomany/employeeupdate.html', {'emp': emp, 'dep': dep})
+
+template
+     
+     <div>
+        <label>Department</label>
+        <div>
+            <select name="departments">
+                <option value="{{ emp.departments.id }}">{{ emp.departments.name }}</option> // add this line before loop as for defaul value
+                {% for d in dep %}
+                <option value="{{ d.id }}">{{ d.name }}</option>
+                {% endfor%}
+            </select>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

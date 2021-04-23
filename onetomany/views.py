@@ -60,12 +60,14 @@ def employeedelete(request, id):
 def employeeupdate(request, id):
     if request.method == 'POST':
         emp = Employee.objects.get(id=id)
-        employee = EmployeeForm(request.POST, instanse=emp)
+        employee = EmployeeForm(request.POST, instance=emp)
         employee.save()
         return redirect('/onetomany/employee/show')
     else:
         emp = Employee.objects.get(id=id)
-        return render(request, 'onetomany/employeeupdate.html', {'emp': emp})
+        dep = Department.objects.all()
+        return render(request, 'onetomany/employeeupdate.html', {'emp': emp, 'dep': dep})
+
 
 
 
