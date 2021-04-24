@@ -1,0 +1,12 @@
+<form method="post" action="/school/student/add">
+    {% csrf_token %}
+    <label>Name:</label>
+    <div>{{ form.name }}</div>
+    <label>Roll no:</label>
+    <div>{{ form.rol_no }}</div>
+    <label>City:</label>
+    <div>{{ form.city }}</div>
+    <div>
+        <button type="submit">Add</button>
+    </div>
+</form>

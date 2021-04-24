@@ -1,0 +1,21 @@
+<form method="post" action="/school/teacher/add/">
+    {% csrf_token %}
+    <div>
+        <labe>Name</labe>
+        <div>{{ form.name }}</div>
+    </div>
+    <div>
+        <label>Id</label>
+        <div>{{ form.teacherid }}</div>
+    </div>
+    <div>
+        <labeL>City</labeL>
+        <div>{{ form.city }}</div>
+    </div>
+    <div>
+        <button type="submit">Add</button>
+    </div>
+</form>
+<p>
+    <a href="/school/schoolmainpage">School main Page</a>
+</p>

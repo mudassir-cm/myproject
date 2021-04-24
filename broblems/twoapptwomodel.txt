@@ -1,0 +1,2 @@
+school app has student model and teacher model
+management app has project model and employee model

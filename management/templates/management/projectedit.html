@@ -1,0 +1,16 @@
+<form method="post" action="/management/project/update/{{ project.id }}">
+    {% csrf_token %}
+    <div>
+        <label>
+            Name
+        </label>
+        <input name="name" value="{{ project.name }}" required>
+    </div>
+    <div>
+        <label>Project Type</label>
+        <input name="ptype" value="{{ project.ptype }}" required>
+    </div>
+    <div>
+        <button type="submit">Update</button>
+    </div>
+</form>

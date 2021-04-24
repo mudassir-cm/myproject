@@ -1,0 +1,26 @@
+{% if list %}
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Teacher Id</th>
+        <th>City</th>
+    </tr>
+    {% for t in list %}
+    <tr>
+        <td>{{ t.name }}</td>
+        <td>{{ t.teacherid }}</td>
+        <td>{{ t.city }}</td>
+        <td>
+            <a href="/school/teacher/edit/{{ t.id }}">Edit</a>
+        </td>
+        <td>
+            <a href="/school/teacher/delete/{{ t.id }}">Delete</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+<h2>There is no record of Teacher yet</h2>
+{% endif %}
+
+<a href="/school/teacher/create">To new teacher click here</a>

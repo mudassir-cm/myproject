@@ -28,7 +28,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'myapp',
     'singleentity',
-    'onetomany'
+    'onetomany',
+    'management',
+    'school',
 ]
 
 MIDDLEWARE = [

@@ -1,0 +1,25 @@
+{% if list %}
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Roll no</th>
+        <th>City</th>
+    </tr>
+    {% for s in list %}
+    <tr>
+        <td>{{ s.name }}</td>
+        <td>{{ s.rol_no }}</td>
+        <td>{{ s.city }}</td>
+        <td>
+            <a href="/school/student/edit/{{ s.id }}">Edit</a>
+        </td>
+        <td>
+            <a href="/school/student/delete/{{ s.id }}">Delete</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+<h2>There is no any student yet</h2>
+{% endif %}
+<a href="/school/student/create">Add new student click here</a>

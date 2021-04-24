@@ -24,4 +24,6 @@ urlpatterns = [
     path('', views.home),
     path('singleentity/', include('singleentity.urls')),
     path('onetomany/', include('onetomany.urls')),
+    path('management/', include('management.urls')),
+    path('school/', include('school.urls')),
 ]

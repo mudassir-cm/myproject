@@ -1,0 +1,21 @@
+<form method="post" action="/management/employee/add">
+    {% csrf_token %}
+    <div>
+        <label>Name</label>
+        <div>{{ form.name }}</div>
+    </div>
+    <div>
+        <label>Employee Id</label>
+        <div>{{ form.empid }}</div>
+    </div>
+    <div>
+        <label>City</label>
+        <div>{{ form.city }}</div>
+    </div>
+    <div>
+        <button type="submit">Add</button>
+    </div>
+</form>
+<p>
+    <a href="/management/managementmainpage">Back to Management Main Page</a>
+</p>

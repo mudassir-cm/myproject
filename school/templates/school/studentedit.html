@@ -1,0 +1,18 @@
+<form method="post" action="/school/student/update/{{ student.id }}">
+    {% csrf_token %}
+    <p>
+        <label>Name</label>
+        <input name="name" value="{{ student.name }}" required>
+    </p>
+    <p>
+        <label>Roll no</label>
+        <input name="rol_no" value="{{ student.rol_no }}" required>
+    </p>
+    <p>
+        <label>City</label>
+        <input name="city" value="{{ student.city }}" required>
+    </p>
+    <p>
+        <button type="submit">Update</button>
+    </p>
+</form>

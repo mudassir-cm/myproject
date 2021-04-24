@@ -1,0 +1,25 @@
+{% if list %}
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Project type</th>
+    </tr>
+    {% for p in list %}
+    <tr>
+        <td>{{ p.name }}</td>
+        <td>{{ p.ptype }}</td>
+        <td>
+            <a href="/management/project/edit/{{ p.id }}">Edit</a>
+        </td>
+        <td>
+            <a href="/management/project/delete/{{ p.id }}">Delete</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+<h2>there is no project yet</h2>
+{% endif%}
+<p>
+    <a href="/management/project/create">To New project click here</a>
+</p>

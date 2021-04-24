@@ -1,0 +1,20 @@
+<form method="post" action="/management/employee/update/{{ emp.id }}">
+    {% csrf_token %}
+    <div>
+        <label>Name</label>
+        <input name="name" value="{{ emp.name }}" required>
+    </div>
+    <div>
+        <label>
+            Employee Id
+        </label>
+        <input name="empid" value="{{ emp.empid }}" required>
+    </div>
+    <div>
+        <label>City</label>
+        <input name="city" value="{{ emp.city }}" required>
+    </div>
+    <div>
+        <button type="submit">Update</button>
+    </div>
+</form>

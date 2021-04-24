@@ -1,0 +1,27 @@
+{% if list %}
+<table>
+    <tr>
+        <th>name</th>
+        <th>Employee Id</th>
+        <th>City</th>
+    </tr>
+    {% for e in list %}
+    <tr>
+        <td>{{ e.name }}</td>
+        <td>{{ e.empid }}</td>
+        <td>{{ e.city }}</td>
+        <td>
+            <a href="/management/employee/edit/{{ e.id }}">Edit</a>
+        </td>
+        <td>
+            <a href="/management/employee/delete/{{ e.id }}">Delete</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+<h2>There is no Employee yet</h2>
+{% endif %}
+<p>
+    <a href="/management/employee/create">click to add Employee</a>
+</p>
