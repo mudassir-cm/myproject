@@ -23,10 +23,12 @@
         <label>Department</label>
         <div>
             <select name="departments">
-                <option value="{{ emp.departments.id }}">{{ emp.departments.name }}</option>
+                <option selected="selected" value="{{ emp.departments.id }}">{{ emp.departments.name }}</option>
                 {% for d in dep %}
+                {% if d.name != emp.departments.name %}
                 <option value="{{ d.id }}">{{ d.name }}</option>
-                {% endfor%}
+                {% endif %}
+                {% endfor %}
             </select>
         </div>
     </div>

@@ -4,10 +4,12 @@
 <table>
     <tr>
         <th>Name</th>
+        <th>Dep</th>
     </tr>
     {% for emp in list%}
     <tr>
         <td>{{ emp.name }}</td>
+        <td>{{ emp.departments.name }}</td>
         <td>
             <a href="/onetomany/employee/update/{{ emp.id }}">Edit</a>
         </td>
