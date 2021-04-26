@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.shortcuts import get_object_or_404
 
 from onetomany.forms import DepartmentForm, EmployeeForm
 from onetomany.models import Department, Employee
@@ -59,7 +60,7 @@ def employeedelete(request, id):
 
 def employeeupdate(request, id):
     if request.method == 'POST':
-        emp = Employee.objects.get(id=id)
+        emp = get_object_or_404(Employee, pk=id) #Employee.objects.get(id=id)
         employee = EmployeeForm(request.POST, instance=emp)
         employee.save()
         return redirect('/onetomany/employee/show')

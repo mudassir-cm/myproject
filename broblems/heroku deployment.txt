@@ -1,0 +1,7 @@
+1) create acount on heroku (password ytrewq!25) documentation per jana he commandline per jana he heroku cli pe jna he
+
+follow this link to install heroku cli https://www.youtube.com/watch?v=Gjf0PxhGU0U
+
+local path to Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System
+
+double click on enableLUA and value data change 1 to 0 and after install change 0 to 1
